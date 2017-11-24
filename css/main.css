@@ -2022,7 +2022,7 @@ pre .javascript .function {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  transition: 1.4s all;
+  transition: 8.4s all;
 }
 .site-author-image:hover {
   -webkit-transform: rotate(360deg);
@@ -2110,7 +2110,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7efbba;
+  background: #a4381b;
 }
 .links-of-blogroll {
   font-size: 13px;
