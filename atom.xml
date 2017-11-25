@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Lion•Neo Space</title>
+  <title>Lion•Neo Blog</title>
   
-  <subtitle>有限中无限的追索</subtitle>
+  <subtitle>大美无言</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lionneo.github.io/"/>
