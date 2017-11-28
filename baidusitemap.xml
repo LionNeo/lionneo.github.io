@@ -4,15 +4,32 @@
 
     
   <url>
-    <loc>https://lionneo.github.io/2017/11/28/test/</loc>
-    <lastmod>2017-11-28T06:52:18.000Z</lastmod>
+    <loc>https://lionneo.github.io/2017/11/28/%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E5%99%A8/</loc>
+    <lastmod>2017-11-28T10:37:45.000Z</lastmod>
     <data>
         <display>
-        <title>test</title>
-        <pubTime>2017-11-28T06:52:18.000Z</pubTime>
+        <title>图片轮播器</title>
+        <pubTime>2017-11-28T10:36:50.000Z</pubTime>
         
          
            
+             
+              <breadCrumb title="ios技术篇" url="https://lionneo.github.io/categories/ios%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lionneo.github.io/Me/index.html</loc>
+    <lastmod>2017-11-28T06:55:01.000Z</lastmod>
+    <data>
+        <display>
+        <title><font size =50 color="#1DB0B8">工作简历 </font></title>
+        <pubTime>2017-11-25T14:48:15.000Z</pubTime>
+        
+         
         </display>
     </data>
     </url>
@@ -69,20 +86,6 @@
              
               <breadCrumb title="ios技术篇" url="https://lionneo.github.io/categories/ios%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lionneo.github.io/Me/index.html</loc>
-    <lastmod>2017-11-28T06:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title><font size =50 color="#1DB0B8">工作简历 </font></title>
-        <pubTime>2017-11-25T14:48:15.000Z</pubTime>
-        
-         
         </display>
     </data>
     </url>
