@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lionneo.github.io/"/>
-  <updated>2017-11-28T06:18:58.000Z</updated>
+  <updated>2017-11-28T06:52:18.000Z</updated>
   <id>https://lionneo.github.io/</id>
   
   <author>
@@ -17,11 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>test</title>
+    <link href="https://lionneo.github.io/2017/11/28/test/"/>
+    <id>https://lionneo.github.io/2017/11/28/test/</id>
+    <published>2017-11-28T06:52:18.000Z</published>
+    <updated>2017-11-28T06:52:18.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>创建cocoapods私有库公有库浅见</title>
     <link href="https://lionneo.github.io/2017/11/28/%E5%88%9B%E5%BB%BAcocoapods%E7%A7%81%E6%9C%89%E5%BA%93%E5%85%AC%E6%9C%89%E5%BA%93%E6%B5%85%E8%A7%81/"/>
     <id>https://lionneo.github.io/2017/11/28/创建cocoapods私有库公有库浅见/</id>
     <published>2017-11-28T06:18:07.000Z</published>
-    <updated>2017-11-28T06:18:58.000Z</updated>
+    <updated>2017-11-28T06:35:35.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="私有库创建方法"><a href="#私有库创建方法" class="headerlink" title="私有库创建方法"></a>私有库创建方法</h1><h2 id="一-创建cocoapods账号"><a href="#一-创建cocoapods账号" class="headerlink" title="一.创建cocoapods账号"></a>一.创建cocoapods账号</h2><p>1.pod trunk register 邮箱地址 ‘用户名’ -description=‘描述信息’<br>例子: pod trunk register 123@qq.com ‘test’ -description = ‘我的账号’</p><p>2.查看账户信息<br>    pod trunk me<br>3.去邮箱里验证账号信息,这样就完成了注册</p><h2 id="二-创建私有库-以git为例"><a href="#二-创建私有库-以git为例" class="headerlink" title="二.创建私有库(以git为例)"></a>二.创建私有库(以git为例)</h2><p>1.创建远程库</p><p>2.pull到本地</p><p>3.添加podspec文件,并且编译文件</p><p>pod spec create podspec文件名<br>例子: pod spec create LN_Label</p><p>注:podspec文件名和私有库名字保持一致<br> ![podspec文件截图] (<a href="https://raw.githubusercontent.com/LionNeo/LN_Photos/master/podspec.jpeg" target="_blank" rel="noopener">https://raw.githubusercontent.com/LionNeo/LN_Photos/master/podspec.jpeg</a>)</p><p>4.将文件推送到远程仓库<br>命令如下</p><p>git add .<br>git commit -m ‘描述提交内容’<br>git push </p><p>5.打上tag版本</p><pre><code>git tag 版本号 例子: git tag 1.0.0git push —tags</code></pre><p>6.验证本地podspec文件<br>    pod lib lint </p><p>7.验证远程仓库podspec文件<br>    pod spec lint</p><p>8.发布私有库<br> pod repo push 远程仓库名 podspec文件名 —source=远程仓库地址,<a href="https://github.com/CocoaPods/Specs.git" target="_blank" rel="noopener">https://github.com/CocoaPods/Specs.git</a> —allow-warnings</p><p>例子如下:<br>‘<br>pod repo push LN_NetWorkTool LN_NetWorkTool.podspec –sources=<a href="https://git.oschina.net/lionneo/LN_NetWorkTool.git,https://github.com/CocoaPods/Specs.git" target="_blank" rel="noopener">https://git.oschina.net/lionneo/LN_NetWorkTool.git,https://github.com/CocoaPods/Specs.git</a>  –use-libraries —allow-warnings<br>‘</p><h2 id="三-公有库发布"><a href="#三-公有库发布" class="headerlink" title="三.公有库发布"></a>三.公有库发布</h2><p>公有库发布方式 1-7的步骤一样,最后一步改为如下即可</p><p>pod trunk push podspec文件名 —allow-warnings<br>例子: pod trunk push LN_Label.podspec —allow-warnings</p><h2 id="四-Podfile文件使用私有库"><a href="#四-Podfile文件使用私有库" class="headerlink" title="四.Podfile文件使用私有库"></a>四.Podfile文件使用私有库</h2><p>1.编辑Podfile文件</p><p>source ‘<a href="https://github.com/CocoaPods/Specs.git" target="_blank" rel="noopener">https://github.com/CocoaPods/Specs.git</a>‘<br>platform :ios, ‘8.0’<br>target ‘项目名称’ do<br>    pod ‘私有库名称’, :git =&gt; ‘私有库地址’<br>end</p><p>举例说明:<br>source ‘<a href="https://github.com/CocoaPods/Specs.git" target="_blank" rel="noopener">https://github.com/CocoaPods/Specs.git</a>‘<br>platform :ios, ‘8.0’<br>target ‘BeiKo_Doctor’ do<br>    pod ‘LN_NetWorkTool’, :git =&gt; ‘<a href="https://git.oschina.net/lionneo/LN_NetWorkTool.git" target="_blank" rel="noopener">https://git.oschina.net/lionneo/LN_NetWorkTool.git</a>‘<br>end</p><p>2.pod install 或者 pod update</p><h2 id="注-出现问题汇总"><a href="#注-出现问题汇总" class="headerlink" title="注:出现问题汇总"></a>注:出现问题汇总</h2><p>1.完成公有库,却无法使用 pod search 搜索到,可以使用</p><p>rm ~/Library/Caches/CocoaPods/search_index.json </p><p>然后在执行 pod search </p>]]></content>
     
