@@ -42,6 +42,31 @@
   </entry>
   
   <entry>
+    <title>Xcode升级到10之后出现的动态库问题1</title>
+    <link href="https://lionneo.github.io/2017/11/28/xcode%E5%8D%87%E7%BA%A7%E5%88%B010%E4%B9%8B%E5%90%8E%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%981/"/>
+    <id>https://lionneo.github.io/2017/11/28/xcode升级到10之后出现问题1/</id>
+    <published>2017-11-28T06:18:07.000Z</published>
+    <updated>2019-07-05T01:43:55.369Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Xcode升级到10之后出现的动态库问题1"><a href="#Xcode升级到10之后出现的动态库问题1" class="headerlink" title="Xcode升级到10之后出现的动态库问题1"></a>Xcode升级到10之后出现的动态库问题1</h1><h2 id="问题出现的原因"><a href="#问题出现的原因" class="headerlink" title="问题出现的原因"></a>问题出现的原因</h2><p>由于Xcode10 废弃了libstdc++，库文件libstdc++.6.0.9. dylib、libstdc++.6. dylib、libstdc++. dylib、libstdc++.6.0.9.tbd、libstdc++.6.tbd、libstdc++.tbd也删除，所以在编译时某些模块会error或crash。</p><p>会出现以下问题：<br>dyld: Library not loaded: /usr/lib/libstdc++.6.dylib<br>Reason: no suitable image found.  Did find:<br>/usr/lib/libstdc++.6.dylib: mach-o, but not built for iOS simulator 等。</p><h2 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h2><p>###1.下载libstdc.6.0.9.dylib  相关文件</p><p><a href="https://pan.baidu.com/s/1PPxkb2LruWnZ2U0vyCcglA" target="_blank" rel="noopener"><strong>下载地址</strong></a> 提取码: fwwz</p><p>###2.模拟器库添加地址<br>把解压后的iPhoneSimulator文件夹里面的文件复制到以下路径</p><p>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib</p><p>###3.真机库添加地址<br>把解压后的iPhoneOS文件夹里面的文件复制到以下路径</p><p>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib</p><p>##4.RuntimeRoot<br>把解压后的RuntimeRoot文件夹里面的文件复制到以下路径</p><p>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime，右键显示包内容，到 Contents/Resources/RuntimeRoot/usr/lib</p><p>###5.重启Xcode 完成</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Xcode升级到10之后出现的动态库问题1&quot;&gt;&lt;a href=&quot;#Xcode升级到10之后出现的动态库问题1&quot; class=&quot;headerlink&quot; title=&quot;Xcode升级到10之后出现的动态库问题1&quot;&gt;&lt;/a&gt;Xcode升级到10之后出现的动态库问题1&lt;/
+      
+    
+    </summary>
+    
+      <category term="ios技术篇" scheme="https://lionneo.github.io/categories/ios%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="xcode,动态库,dylib" scheme="https://lionneo.github.io/tags/xcode-%E5%8A%A8%E6%80%81%E5%BA%93-dylib/"/>
+    
+  </entry>
+  
+  <entry>
     <title>创建cocoapods私有库公有库浅见</title>
     <link href="https://lionneo.github.io/2017/11/28/%E5%88%9B%E5%BB%BAcocoapods%E7%A7%81%E6%9C%89%E5%BA%93%E5%85%AC%E6%9C%89%E5%BA%93%E6%B5%85%E8%A7%81/"/>
     <id>https://lionneo.github.io/2017/11/28/创建cocoapods私有库公有库浅见/</id>
